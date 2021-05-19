@@ -5,6 +5,16 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-Tierra >> proporcionTotal [ 
+Tierra >> proporcion [ 
 ^0
+]
+
+{ #category : #'as yet unclassified' }
+Tierra >> proporcionAgua [
+	^ 0
+]
+
+{ #category : #'as yet unclassified' }
+Tierra >> proporcionTierra [
+	^ 1
 ]

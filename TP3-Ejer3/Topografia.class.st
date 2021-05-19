@@ -5,6 +5,16 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-Topografia >> proporcionTotal [
-^self subclassResponsibility 
+Topografia >> proporcion [
+self subclassResponsibility 
+]
+
+{ #category : #'as yet unclassified' }
+Topografia >> proporcionAgua [
+	^ self proporcion
+]
+
+{ #category : #'as yet unclassified' }
+Topografia >> proporcionTierra [
+	^ 1 - self proporcion
 ]
