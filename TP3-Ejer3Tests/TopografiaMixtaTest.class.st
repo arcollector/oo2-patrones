@@ -33,6 +33,30 @@ TopografiaMixtaTest >> setUp [
 ]
 
 { #category : #tests }
+TopografiaMixtaTest >> testEqualsTo [
+	self assert: (composite1 equalsTo: composite1).
+	self deny: (composite1 equalsTo: composite2).
+	self
+		assert:
+			(composite1
+				equalsTo:
+					(TopografiaMixta new
+						agregar: Agua new
+						with: Agua new
+						with: Tierra new
+						with: Tierra new)).
+	self
+		deny:
+			(composite1
+				equalsTo:
+					(TopografiaMixta new
+						agregar: Tierra new
+						with: Tierra new
+						with: Agua new
+						with: Agua new))
+]
+
+{ #category : #tests }
 TopografiaMixtaTest >> testProporcionAgua [
 	self assert: composite1 proporcionAgua closeTo: 0.5.
 	self assert: composite2 proporcionAgua closeTo: 0.525.
