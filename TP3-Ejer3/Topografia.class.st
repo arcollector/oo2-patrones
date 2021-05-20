@@ -11,7 +11,7 @@ Topografia >> equalsTo: aTopografia [
 
 { #category : #'as yet unclassified' }
 Topografia >> proporcion [
-self subclassResponsibility 
+	self subclassResponsibility
 ]
 
 { #category : #'as yet unclassified' }

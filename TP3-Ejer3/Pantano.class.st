@@ -1,10 +1,10 @@
 Class {
-	#name : #Tierra,
+	#name : #Pantano,
 	#superclass : #Topografia,
 	#category : #'TP3-Ejer3'
 }
 
 { #category : #'as yet unclassified' }
-Tierra >> proporcion [
-	^ 0.0
+Pantano >> proporcion [ 
+	^ 0.7.
 ]

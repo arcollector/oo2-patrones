@@ -36,15 +36,5 @@ TopografiaMixta >> initialize [
 
 { #category : #'as yet unclassified' }
 TopografiaMixta >> proporcion [
-	^ ((components sumNumbers: [ :component | component proporcion ]) / 4) 
-]
-
-{ #category : #'as yet unclassified' }
-TopografiaMixta >> proporcionAgua [
-	^ (components sumNumbers: [ :component | component proporcionAgua ]) / 4
-]
-
-{ #category : #'as yet unclassified' }
-TopografiaMixta >> proporcionTierra [
-	^ (components sumNumbers: [ :component | component proporcionTierra]) / 4
+	^ (components sumNumbers: [ :component | component proporcion ]) / 4.0.
 ]
