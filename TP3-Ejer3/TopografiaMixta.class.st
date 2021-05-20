@@ -7,6 +7,11 @@ Class {
 	#category : #'TP3-Ejer3'
 }
 
+{ #category : #comparing }
+TopografiaMixta >> = aTopografia [ 
+	^ components hasEqualElements: aTopografia components
+]
+
 { #category : #'as yet unclassified' }
 TopografiaMixta >> agregar: aTopografia1 with: aTopografia2 with: aTopografia3 with: aTopografia4 [
 	components addAll: { aTopografia1 . aTopografia2 . aTopografia3 . aTopografia4  }
@@ -35,6 +40,6 @@ TopografiaMixta >> initialize [
 ]
 
 { #category : #'as yet unclassified' }
-TopografiaMixta >> proporcion [
-	^ (components sumNumbers: [ :component | component proporcion ]) / 4.0.
+TopografiaMixta >> proporcionAgua [
+	^ (components sumNumbers: [ :component | component proporcionAgua ]) / 4.0.
 ]

@@ -4,22 +4,23 @@ Class {
 	#category : #'TP3-Ejer3'
 }
 
+{ #category : #comparing }
+Topografia >> = aTopografia [
+	^ self proporcionAgua = aTopografia proporcionAgua
+		and: self proporcionTierra = aTopografia proporcionTierra
+]
+
 { #category : #'as yet unclassified' }
 Topografia >> equalsTo: aTopografia [ 
 	^ self class = aTopografia class
 ]
 
 { #category : #'as yet unclassified' }
-Topografia >> proporcion [
-	self subclassResponsibility
-]
-
-{ #category : #'as yet unclassified' }
 Topografia >> proporcionAgua [
-	^ self proporcion
+	self subclassResponsibility .
 ]
 
 { #category : #'as yet unclassified' }
 Topografia >> proporcionTierra [
-	^ 1 - self proporcion
+	^ 1 - self proporcionAgua
 ]

@@ -33,6 +33,50 @@ TopografiaMixtaTest >> setUp [
 ]
 
 { #category : #tests }
+TopografiaMixtaTest >> testEqual [
+	self assert: composite1 = composite1.
+	self deny: composite1 = composite2.
+	self
+		assert:
+			composite1
+				= 
+					(TopografiaMixta new
+						agregar: Agua new
+						with: Agua new
+						with: Tierra new
+						with: Tierra new).
+	self
+		deny:
+			composite1
+				= 
+					(TopografiaMixta new
+						agregar: Tierra new
+						with: Tierra new
+						with: Agua new
+						with: Agua new).
+	self assert: composite3 = composite3.
+	self
+		assert:
+			composite3
+				= 
+					(TopografiaMixta new
+						agregar:
+							(TopografiaMixta new
+								agregar: Agua new
+								with: Agua new
+								with: Tierra new
+								with: Tierra new)
+						with: Agua new
+						with: Agua new
+						with:
+							(TopografiaMixta new
+								agregar: Tierra new
+								with: Pantano new
+								with: Pantano new
+								with: Pantano new))
+]
+
+{ #category : #tests }
 TopografiaMixtaTest >> testEqualsTo [
 	self assert: (composite1 equalsTo: composite1).
 	self deny: (composite1 equalsTo: composite2).
@@ -53,7 +97,27 @@ TopografiaMixtaTest >> testEqualsTo [
 						agregar: Tierra new
 						with: Tierra new
 						with: Agua new
-						with: Agua new))
+						with: Agua new)).
+	self assert: (composite3 equalsTo: composite3).
+	self
+		assert:
+			(composite3
+				equalsTo:
+					(TopografiaMixta new
+						agregar:
+							(TopografiaMixta new
+								agregar: Agua new
+								with: Agua new
+								with: Tierra new
+								with: Tierra new)
+						with: Agua new
+						with: Agua new
+						with:
+							(TopografiaMixta new
+								agregar: Tierra new
+								with: Pantano new
+								with: Pantano new
+								with: Pantano new)))
 ]
 
 { #category : #tests }

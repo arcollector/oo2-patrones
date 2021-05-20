@@ -5,6 +5,6 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-Pantano >> proporcion [ 
+Pantano >> proporcionAgua [ 
 	^ 0.7.
 ]

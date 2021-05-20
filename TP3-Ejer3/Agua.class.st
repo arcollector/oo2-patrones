@@ -5,6 +5,6 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-Agua >> proporcion [
+Agua >> proporcionAgua [
 	^ 1.0
 ]
