@@ -5,8 +5,8 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-Tierra >> proporcion [ 
-^0
+Tierra >> proporcion [
+	^ 0
 ]
 
 { #category : #'as yet unclassified' }

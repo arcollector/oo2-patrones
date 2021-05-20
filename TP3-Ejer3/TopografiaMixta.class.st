@@ -8,18 +8,25 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-TopografiaMixta >> agregarTopografia: aTopografia1 with: aTopografia2 with: aTopografia3 with: aTopografia4 [
+TopografiaMixta >> agregar: aTopografia1 with: aTopografia2 with: aTopografia3 with: aTopografia4 [
 	components addAll: { aTopografia1 . aTopografia2 . aTopografia3 . aTopografia4  }
 ]
 
-{ #category : #accessing }
+{ #category : #private }
 TopografiaMixta >> components [
-^components
+	^ components
 ]
 
 { #category : #'as yet unclassified' }
 TopografiaMixta >> equalsTo: aTopografia [
-	^ components allSatisfy: [  ]
+	"{ {a1 . b1 } . { a2 . b2 } . {a3 . b3 } }"
+
+	"^ (components zip: aTopografia compnents) allSatisfy: [ :a :b | a equalsTo: b ]"
+
+	1 to: 4 do: [ :i | 
+		((components at: i) equalsTo: (aTopografia components at: i))
+			ifFalse: [ ^ false ] ].
+	^ true
 ]
 
 { #category : #initialization }

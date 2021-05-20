@@ -6,15 +6,15 @@ Class {
 
 { #category : #'as yet unclassified' }
 Agua >> proporcion [
-	^1
+	^ 1
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #deprecated }
 Agua >> proporcionAgua [
 	^ 1
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #deprecated }
 Agua >> proporcionTierra [
 	^ 0
 ]
