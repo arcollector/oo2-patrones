@@ -33,6 +33,13 @@ TopografiaMixtaTest >> setUp [
 ]
 
 { #category : #tests }
+TopografiaMixtaTest >> testDesperdicio [
+	self assert: composite1 desperdicio equals: 0.103.
+	self assert: composite2 desperdicio equals: 0.105575.
+	self assert: composite3 desperdicio equals: 0.1309580625.
+]
+
+{ #category : #tests }
 TopografiaMixtaTest >> testEqual [
 	self assert: composite1 = composite1.
 	self deny: composite1 = composite2.
@@ -118,6 +125,13 @@ TopografiaMixtaTest >> testEqualsTo [
 								with: Pantano new
 								with: Pantano new
 								with: Pantano new)))
+]
+
+{ #category : #tests }
+TopografiaMixtaTest >> testProductividad [
+	self assert: composite1 productividad equals: 0.45.
+	self assert: composite2 productividad equals: 0.6.
+	self assert: composite3 productividad equals: 0.2625
 ]
 
 { #category : #tests }

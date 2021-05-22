@@ -11,8 +11,18 @@ Topografia >> = aTopografia [
 ]
 
 { #category : #'as yet unclassified' }
+Topografia >> desperdicio [
+	self subclassResponsibility
+]
+
+{ #category : #'as yet unclassified' }
 Topografia >> equalsTo: aTopografia [ 
 	^ self class = aTopografia class
+]
+
+{ #category : #'as yet unclassified' }
+Topografia >> productividad [
+	self subclassResponsibility
 ]
 
 { #category : #'as yet unclassified' }
