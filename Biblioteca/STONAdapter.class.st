@@ -26,8 +26,3 @@ STONAdapter >> exportSocio: aSocio [
 		at: #legajo put: aSocio legajo;
 		yourself
 ]
-
-{ #category : #'as yet unclassified' }
-STONAdapter >> manolo: unManolito [
-^0.
-]
