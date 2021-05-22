@@ -72,3 +72,8 @@ DirectorioTest >> testListadoDeContenido [
 	listado := listadoStream contents.
 	self assert: conSubdirectorios listadoDeContenido = listado
 ]
+
+{ #category : #tests }
+DirectorioTest >> testTamanoTotalOcupado [
+	self assert: vacio tamanoTotalOcupado equals: 32.
+]
