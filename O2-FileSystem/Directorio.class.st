@@ -2,7 +2,8 @@ Class {
 	#name : #Directorio,
 	#superclass : #Nodo,
 	#instVars : [
-		'nodos'
+		'nodos',
+		'padre'
 	],
 	#category : #'O2-FileSystem'
 }
@@ -14,7 +15,9 @@ Directorio class >> llamado: unString creadoEl: unaFecha [
 
 { #category : #'as yet unclassified' }
 Directorio >> agregar: unNodo [
-	nodos add: unNodo .
+	unNodo esArchivo
+		ifFalse: [ unNodo padre: nombre  ].
+	nodos add: unNodo
 ]
 
 { #category : #'as yet unclassified' }
@@ -35,6 +38,7 @@ Directorio >> esArchivo [
 { #category : #initialization }
 Directorio >> initialize [
 	nodos := OrderedCollection new .
+	padre := '/'
 ]
 
 { #category : #'as yet unclassified' }
@@ -45,8 +49,13 @@ Directorio >> listadoDeContenido [
 	self algunDirectorio
 		ifTrue: [ listadoStream cr.
 			listadoStream
-				<< (nodos collect: [ :nodo | nodo listadoDeContenido ]) asStringWithCr ].
+				<< (nodos collect: [ :nodo | nombre , nodo listadoDeContenido ]) asStringWithCr ].
 	^ listadoStream contents
+]
+
+{ #category : #accessing }
+Directorio >> padre: aString [ 
+	padre := aString , '/'.
 ]
 
 { #category : #accessing }
