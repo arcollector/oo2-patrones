@@ -13,12 +13,22 @@ Archivo class >> llamado: unString creadoEl: unaFecha kBytes: unNumero [
 		yourself .
 ]
 
+{ #category : #'as yet unclassified' }
+Archivo >> esArchivo [
+	^ true .
+]
+
 { #category : #initialization }
 Archivo >> initializeConNombre: aString conFecha: aDateAndTime conPeso: anInteger [
 	nombre := aString .
 	fecha := aDateAndTime .
 	peso := anInteger.
 
+]
+
+{ #category : #'as yet unclassified' }
+Archivo >> listadoDeContenido [ 
+	^ ''
 ]
 
 { #category : #accessing }

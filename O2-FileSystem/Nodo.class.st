@@ -9,6 +9,11 @@ Class {
 	#category : #'O2-FileSystem'
 }
 
+{ #category : #'as yet unclassified' }
+Nodo >> esArchivo [ 
+	self subclassResponsibility .
+]
+
 { #category : #initialization }
 Nodo >> initializeConNombre: aString conFecha: aDateAndTime [
 	nombre := aString.
