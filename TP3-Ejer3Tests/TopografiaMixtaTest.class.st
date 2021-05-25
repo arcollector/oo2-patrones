@@ -12,6 +12,7 @@ Class {
 
 { #category : #running }
 TopografiaMixtaTest >> setUp [
+	| agua tierra |
 	agua := Agua new.
 	tierra := Tierra new.
 	pantano := Pantano new.
@@ -30,13 +31,6 @@ TopografiaMixtaTest >> setUp [
 		with: agua
 		with: agua
 		with: composite2
-]
-
-{ #category : #tests }
-TopografiaMixtaTest >> testDesperdicio [
-	self assert: composite1 desperdicio equals: 0.103.
-	self assert: composite2 desperdicio equals: 0.105575.
-	self assert: composite3 desperdicio equals: 0.1309580625.
 ]
 
 { #category : #tests }
@@ -81,50 +75,6 @@ TopografiaMixtaTest >> testEqual [
 								with: Pantano new
 								with: Pantano new
 								with: Pantano new))
-]
-
-{ #category : #tests }
-TopografiaMixtaTest >> testEqualsTo [
-	self assert: (composite1 equalsTo: composite1).
-	self deny: (composite1 equalsTo: composite2).
-	self
-		assert:
-			(composite1
-				equalsTo:
-					(TopografiaMixta new
-						agregar: Agua new
-						with: Agua new
-						with: Tierra new
-						with: Tierra new)).
-	self
-		deny:
-			(composite1
-				equalsTo:
-					(TopografiaMixta new
-						agregar: Tierra new
-						with: Tierra new
-						with: Agua new
-						with: Agua new)).
-	self assert: (composite3 equalsTo: composite3).
-	self
-		assert:
-			(composite3
-				equalsTo:
-					(TopografiaMixta new
-						agregar:
-							(TopografiaMixta new
-								agregar: Agua new
-								with: Agua new
-								with: Tierra new
-								with: Tierra new)
-						with: Agua new
-						with: Agua new
-						with:
-							(TopografiaMixta new
-								agregar: Tierra new
-								with: Pantano new
-								with: Pantano new
-								with: Pantano new)))
 ]
 
 { #category : #tests }

@@ -5,11 +5,6 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-Tierra >> desperdicio [
-	^ 0.05.
-]
-
-{ #category : #'as yet unclassified' }
 Tierra >> productividad [
 	^ 0.9.
 ]
